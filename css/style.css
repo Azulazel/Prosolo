@@ -1,1 +1,407 @@
+/* 1. CONFIGURAÇÕES GLOBAIS E ESTILO */
 
+/* Paleta de Cores */
+:root {
+    --verde-principal: #4CAF50;
+    --branco: #FFFFFF;
+    --preto-cinza-escuro: #333333;
+    --cinza-claro: #F4F4F4;
+}
+
+/* Estilos Globais */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--preto-cinza-escuro);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Estilo Padrão para Botões */
+.btn {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Leve escurecimento do fundo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sutil sombra */
+}
+
+/* Adicionando um estilo base para container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. ESTRUTURA DA PÁGINA - SEÇÃO POR SEÇÃO */
+
+/* A. Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--verde-principal);
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--preto-cinza-escuro);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--verde-principal);
+}
+
+/* B. Seção Inicial/Hero */
+#inicio {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--branco);
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Estilo geral para seções da página */
+.page-section {
+    padding: 80px 0;
+}
+
+/* C. Seção "Quem Somos" */
+#quem-somos {
+    background-color: var(--branco);
+}
+
+.quem-somos-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.quem-somos-content .image-column {
+    flex: 1;
+}
+
+.quem-somos-content .image-column img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.quem-somos-content .text-column {
+    flex: 1;
+}
+
+.quem-somos-content .text-column h2 {
+    color: var(--verde-principal);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.quem-somos-content .text-column p {
+    line-height: 1.6;
+}
+
+/* D. Seção "ORGANIC" */
+#organic .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#organic .section-title h2 {
+    font-size: 36px;
+    color: var(--preto-cinza-escuro);
+}
+
+/* Grid de Benefícios */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.benefit-item .icon {
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--verde-principal);
+}
+
+/* Layout de Especificações */
+.specs-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.specs-layout .image-column {
+    flex: 1;
+    text-align: center;
+}
+
+.specs-layout .image-column img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.specs-layout .text-column {
+    flex: 1;
+}
+
+.specs-layout .text-column h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.specs-layout .text-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.specs-layout .text-column ul li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Botão CTA */
+#organic .cta-button {
+    text-align: center;
+}
+
+/* E. Seção "Fale Conosco" */
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    color: var(--verde-principal);
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* F. Rodapé */
+footer {
+    background-color: var(--preto-cinza-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: var(--branco);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--verde-principal);
+}
+
+/* 3. FUNCIONALIDADES E RESPONSIVIDADE */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--preto-cinza-escuro);
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .hamburger {
+        display: flex;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--branco);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* Quem Somos */
+    .quem-somos-content {
+        flex-direction: column;
+    }
+
+    /* ORGANIC */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specs-layout {
+        flex-direction: column;
+    }
+
+    /* Fale Conosco */
+    .contact-content {
+        flex-direction: column;
+    }
+}
