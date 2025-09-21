@@ -101,11 +101,14 @@ header .container {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--verde-principal);
-    text-decoration: none;
+    display: inline-block; /* Garante que o link se ajuste ao tamanho da imagem */
+    vertical-align: middle; /* Alinha verticalmente com outros itens, se houver */
+}
+
+.logo img {
+    height: 40px; /* Define uma altura fixa para o logo */
+    width: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
 }
 
 header nav ul {
