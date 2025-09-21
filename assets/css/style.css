@@ -200,13 +200,17 @@ header nav ul li a:hover::after {
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 64px; /* Aumentado de 48px para 64px */
+    font-weight: 700; /* Equivalente a bold */
+    color: #FFFFFF;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 22px; /* Aumentado de 18px para 22px */
+    font-weight: 400; /* Regular */
+    color: #FFFFFF;
     max-width: 600px;
     margin: 0 auto 30px;
 }
