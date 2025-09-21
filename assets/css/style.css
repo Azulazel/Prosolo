@@ -40,7 +40,7 @@ h1, h2, h3 {
 /* Estilo Padrão para Botões */
 .btn {
     background-color: var(--verde-principal);
-    color: var(--dourado);
+    color: var(--branco);
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
