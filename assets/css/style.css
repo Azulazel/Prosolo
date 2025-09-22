@@ -367,6 +367,56 @@ header nav ul li a:hover::after {
     font-family: 'Lato', sans-serif;
 }
 
+/*--------------------------------------------------------------
+# C. Seção Quem Somos (Home Page)
+--------------------------------------------------------------*/
+.home-page #quem-somos {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+}
+
+.home-page #quem-somos .container {
+    max-width: 1100px; /* Mais compacto */
+}
+
+.home-page #quem-somos .quem-somos-content {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Mais respiro */
+}
+
+.home-page #quem-somos .quem-somos-image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.home-page #quem-somos .quem-somos-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    display: block;
+}
+
+.home-page #quem-somos .quem-somos-text {
+    flex: 1;
+    max-width: 55%;
+    padding-left: 20px;
+}
+
+.home-page #quem-somos .quem-somos-text h2 {
+    font-size: 2.5rem; /* Um pouco menor para elegância */
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50; /* Cor escura e moderna */
+    margin-bottom: 20px;
+}
+
+.home-page #quem-somos .quem-somos-text p {
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
 /* F. Rodapé */
 footer {
     background-color: var(--preto-cinza-escuro);
