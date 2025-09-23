@@ -456,13 +456,8 @@ footer {
     color: var(--preto-cinza-escuro);
 }
 
-.section-title .highlight {
+.highlight {
     color: var(--dourado);
-}
-
-.home-page #quem-somos .section-title {
-    text-align: center;
-    margin-bottom: 50px;
 }
 
 .solucoes-cards {
