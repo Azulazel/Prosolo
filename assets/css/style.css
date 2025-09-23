@@ -519,9 +519,9 @@ footer {
     transition: background 0.3s;
 }
 
-/* Hamburger na home page (fundo transparente) deve ser escuro */
+/* Hamburger na home page (fundo transparente) deve ser branco para contraste */
 body.home-page .hamburger span {
-    background: var(--preto-cinza-escuro);
+    background: var(--branco);
 }
 
 
@@ -550,6 +550,7 @@ body.home-page .hamburger span {
         top: 60px; /* Ajustar de acordo com a altura do header */
         left: 0;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 10px 0; /* Espaçamento interno */
     }
 
     /* Cor dos links no menu mobile ativo */
@@ -570,30 +571,61 @@ body.home-page .hamburger span {
     }
 
     header nav ul li {
-        margin: 15px 0;
+        margin: 0;
+        padding: 12px 0; /* Área de toque maior */
     }
 
     /* Hero */
     #inicio {
         margin-top: -60px; /* Compensa o padding do body */
+        height: 90vh;
     }
 
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .hero-content p {
-        font-size: 16px;
+        font-size: 18px;
+        padding: 0 20px; /* Evita que o texto toque as bordas */
     }
 
-    /* Quem Somos */
+    .page-section {
+        padding: 60px 0;
+    }
+
+    /* Quem Somos (Home) */
+    .home-page #quem-somos {
+        padding: 60px 0;
+    }
+
+    .home-page #quem-somos .quem-somos-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .home-page #quem-somos .quem-somos-image,
+    .home-page #quem-somos .quem-somos-text {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .home-page #quem-somos .quem-somos-text h2 {
+        font-size: 2.2rem;
+    }
+
+
+    /* Quem Somos (Padrão) */
     .quem-somos-content {
         flex-direction: column;
+        gap: 30px;
     }
 
     /* Nossas Soluções */
     .solucoes-cards {
         grid-template-columns: 1fr;
+        gap: 35px;
     }
 
     /* ORGANIC */
@@ -608,5 +640,17 @@ body.home-page .hamburger span {
     /* Fale Conosco */
     .contact-content {
         flex-direction: column;
+    }
+
+    /* Rodapé */
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
     }
 }
