@@ -406,7 +406,7 @@ header nav ul li a:hover::after {
 .home-page #quem-somos .quem-somos-text h2 {
     font-size: 2.5rem; /* Um pouco menor para elegância */
     font-family: 'Montserrat', sans-serif;
-    color: #2c3e50; /* Cor escura e moderna */
+    color: var(--dourado); /* Cor dourada */
     margin-bottom: 20px;
 }
 
@@ -438,6 +438,65 @@ footer {
 
 .social-icons a:hover {
     color: var(--verde-principal);
+}
+
+/* D. Seção Nossas Soluções */
+#nossas-solucoes {
+    background-color: var(--cinza-claro);
+    padding: 40px 0;
+}
+
+#nossas-solucoes .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#nossas-solucoes .section-title h2 {
+    font-size: 36px;
+    color: var(--preto-cinza-escuro);
+}
+
+.highlight {
+    color: var(--dourado);
+}
+
+.solucoes-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    line-height: 1.6;
 }
 
 /* 3. FUNCIONALIDADES E RESPONSIVIDADE */
@@ -530,6 +589,11 @@ body.home-page .hamburger span {
     /* Quem Somos */
     .quem-somos-content {
         flex-direction: column;
+    }
+
+    /* Nossas Soluções */
+    .solucoes-cards {
+        grid-template-columns: 1fr;
     }
 
     /* ORGANIC */
