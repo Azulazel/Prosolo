@@ -406,7 +406,7 @@ header nav ul li a:hover::after {
 .home-page #quem-somos .quem-somos-text h2 {
     font-size: 2.5rem; /* Um pouco menor para elegância */
     font-family: 'Montserrat', sans-serif;
-    color: #2c3e50; /* Cor escura e moderna */
+    color: var(--dourado); /* Cor dourada */
     margin-bottom: 20px;
 }
 
