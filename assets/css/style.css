@@ -462,16 +462,21 @@ footer {
 
 .solucoes-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, 350px); /* Fit cards based on their width */
     gap: 30px;
+    justify-content: center; /* Center the cards in the container */
 }
 
 .card {
+    width: 350px;
+    height: 500px;
     background-color: var(--branco);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
 }
 
 .card:hover {
@@ -481,12 +486,16 @@ footer {
 
 .card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 220px; /* Adjusted height for the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
 }
 
 .card-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allows this section to grow and fill available space */
 }
 
 .card-content h3 {
