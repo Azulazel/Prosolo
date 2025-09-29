@@ -454,12 +454,6 @@ footer {
     max-height: 70px;
     max-width: 150px;
     object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.partner-logo-grid img:hover {
-    filter: grayscale(0%);
 }
 
 /* D. Seção Nossas Soluções */
