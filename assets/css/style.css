@@ -381,7 +381,6 @@ header nav ul li a:hover::after {
 
 .home-page #quem-somos .quem-somos-content {
     display: flex;
-    align-items: center;
     gap: 60px; /* Mais respiro */
 }
 
@@ -391,8 +390,9 @@ header nav ul li a:hover::after {
 }
 
 .home-page #quem-somos .quem-somos-image img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px; /* Bordas mais arredondadas */
     display: block;
 }
