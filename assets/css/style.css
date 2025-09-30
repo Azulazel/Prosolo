@@ -336,6 +336,11 @@ header nav ul li a:hover::after {
     line-height: 1.6;
 }
 
+.buy-button {
+    margin-top: 20px;
+    display: inline-block;
+}
+
 /* Botão CTA */
 #organic .cta-button {
     text-align: center;
