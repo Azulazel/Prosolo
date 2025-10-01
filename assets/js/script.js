@@ -51,4 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // 5. WhatsApp Redirect for Contact Form
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact').value;
+            const message = document.getElementById('message').value;
+
+            const companyNumber = '5531971735566';
+            const text = `Olá! Meu nome é ${name} (${contact}).\n\n${message}`;
+
+            const whatsappUrl = `https://wa.me/${companyNumber}?text=${encodeURIComponent(text)}`;
+
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 });
