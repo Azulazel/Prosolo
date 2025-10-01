@@ -11,9 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Interactive Header
     const header = document.querySelector('header');
-
     if (header) {
-        const scrollThreshold = 50;
+        let scrollThreshold = 50;
+        const heroSection = document.getElementById('inicio');
+        const isHomePage = document.body.classList.contains('home-page');
+
+        const calculateThreshold = () => {
+            if (isHomePage && heroSection) {
+                // O header muda quando o scroll passar da altura da seção hero, menos a altura do próprio header.
+                // Usamos Math.max para garantir que o threshold não seja menor que um valor mínimo (ex: 70px).
+                scrollThreshold = Math.max(70, heroSection.offsetHeight - header.offsetHeight);
+            } else {
+                scrollThreshold = 50;
+            }
+        };
+
         const updateHeader = () => {
             if (window.scrollY > scrollThreshold) {
                 header.classList.add('scrolled');
@@ -21,8 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('scrolled');
             }
         };
-        window.addEventListener('scroll', updateHeader);
+
+        calculateThreshold();
         updateHeader();
+
+        window.addEventListener('scroll', updateHeader);
+        window.addEventListener('resize', () => {
+            calculateThreshold();
+            updateHeader();
+        });
     }
 
     // 3. Initialize AOS (Animate on Scroll)
