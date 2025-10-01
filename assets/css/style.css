@@ -275,7 +275,7 @@ header nav ul li a:hover::after {
 }
 
 .benefit-item .icon {
-    height: 100px;
+    height: 150px;
     width: auto;
     margin-bottom: 15px;
 }
