@@ -89,11 +89,11 @@ body.home-page header {
     box-shadow: none;
 }
 
-/* Header com rolagem (home page) - Mantém transparente */
+/* Header com rolagem (home page) - Fica verde */
 body.home-page header.scrolled {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 10px 0; /* Mantém o padding para um efeito sutil de encolhimento */
+    background-color: var(--verde-escuro);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
 }
 
 header .container {
