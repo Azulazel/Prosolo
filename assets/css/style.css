@@ -202,9 +202,10 @@ header nav ul li a:hover::after {
 .hero-content h1 {
     font-size: 64px; /* Aumentado de 48px para 64px */
     font-weight: 700; /* Equivalente a bold */
-    color: #FFFFFF;
+    color: var(--dourado);
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -561,15 +562,15 @@ footer {
 .hamburger span {
     height: 3px;
     width: 25px;
-    background: var(--branco);
+    background: var(--dourado);
     margin-bottom: 4px;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
-/* Hamburger na home page (fundo transparente) deve ser branco para contraste */
+/* Hamburger na home page (fundo transparente) deve ser dourado para contraste */
 body.home-page .hamburger span {
-    background: var(--branco);
+    background: var(--dourado);
 }
 
 
@@ -593,7 +594,7 @@ body.home-page .hamburger span {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: var(--branco);
+        background-color: var(--verde-escuro);
         position: absolute;
         top: 60px; /* Ajustar de acordo com a altura do header */
         left: 0;
@@ -603,15 +604,15 @@ body.home-page .hamburger span {
 
     /* Cor dos links no menu mobile ativo */
     header nav ul.active li a {
-        color: var(--preto-cinza-escuro);
+        color: var(--dourado);
     }
 
     header nav ul.active li a:hover {
-        color: var(--verde-principal);
+        color: var(--branco);
     }
 
     header nav ul.active li a::after {
-        background-color: var(--verde-principal);
+        background-color: var(--dourado);
     }
 
     header nav ul.active {
@@ -681,7 +682,8 @@ body.home-page .hamburger span {
         grid-template-columns: 1fr;
     }
 
-    .specs-layout {
+    .specs-layout,
+    .specs-layout + .specs-layout {
         flex-direction: column;
     }
 
