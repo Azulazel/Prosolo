@@ -617,6 +617,13 @@ body.home-page .hamburger span {
 
     header nav ul.active {
         display: flex;
+        background-color: transparent;
+    }
+
+    /* Make header semi-transparent when menu is open on mobile */
+    header.menu-open {
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
     }
 
     header nav ul li {
