@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Hamburger Menu
     const hamburger = document.getElementById('hamburger-menu');
     const navLinks = document.getElementById('nav-links');
+    const header = document.querySelector('header'); // Get the header element
 
-    if (hamburger && navLinks) {
+    if (hamburger && navLinks && header) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            header.classList.toggle('menu-open'); // Toggle a class on the header
         });
     }
 
     // 2. Interactive Header
-    const header = document.querySelector('header');
     if (header) {
         let scrollThreshold = 50;
         const heroSection = document.getElementById('inicio');
