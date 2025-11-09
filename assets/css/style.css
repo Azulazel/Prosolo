@@ -532,7 +532,7 @@ footer {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     flex: 1; /* Allows this section to grow and fill available space */
